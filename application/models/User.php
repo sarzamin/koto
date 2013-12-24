@@ -8,8 +8,24 @@
 
 		}//end constructor
 
-		function addUser(){
+		function addUser($username,$password,$email){
+			
+			//User's basic information
+			$this->username = $username;
+			$this->password = sha1($password);
+			$this->email = $email;
+			$this->currentTime = time();
 
+			//array of user's data
+			$userDataArray = array(
+				'username' = $this->username,
+				'password' = $this->password,
+				'email' = $this->email,
+				'signupDate' = $this->currentTime
+				);
+
+			//Insert $userDataArray to users table
+			$this->db->insert('users', $userDataArray);
 		}//end function addUser
 
 		function editUser(){

@@ -1,0 +1,10 @@
+CREATE TABLE posts (
+	postID INT(15) NOT NULL AUTOـINCREMENT PRIMARY KEY,
+	postTitle VARCHAR(250),
+	postHead TEXT NOT NULL,
+	postBody TEXT,
+	postAuthorID INT(12) NOT NULL,
+	postCreateTime TIMESTAMP NOT NULL,
+	postModifyTime TIMESTAMP NOT NULL,
+	active BOOLEAN
+);

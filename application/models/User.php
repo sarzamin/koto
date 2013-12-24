@@ -58,14 +58,26 @@
 		}//end function editUser
 
 
-		function changePassword()
+		function changePassword($userID,$currentPassword,$newPassword)
 		{
+			//check current password accuracy
+			$selectRow = $this->db->get_where('users',array('userID',$userID));
 
+			if(sha1($currentPassword)===sha1($selectRow->row(0))){
+
+				//update password
+				$this->db->where('userID',$userID);
+				$this->db->update('users',sha1($newPassword));
+
+			}
 		}
 
 
-		function userInfo()
+		function userInfo($userID)
 		{
+			//select user
+			$selectUser=$this->db->get_where('users',array('userID',$userID));
+			return $selectUser->result_array();
 
 		}//end function userInfo
 

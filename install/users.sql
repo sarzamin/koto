@@ -8,5 +8,6 @@ CREATE TABLE users (
 	url VARCHAR(250),
 	location VARCHAR(250),
 	about TEXT,
+	usertype VARCHAR(25) NOT NULL,
 	active BOOLEAN NOT NULL
 );

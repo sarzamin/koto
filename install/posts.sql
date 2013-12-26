@@ -3,8 +3,9 @@ postID BIGINT( 15 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 postTitle VARCHAR( 250 ) ,
 postHead TEXT NOT NULL ,
 postBody TEXT,
-authorID INT( 12 ) NOT NULL REFERENCES users( userID ) ON DELETE CASCADE ,
+authorID INT( 12 ) NOT NULL  ,
 postCreateTime TIMESTAMP NOT NULL ,
 postModifyTime TIMESTAMP,
-active TINYINT(1)
+active TINYINT(1),
+FOREIGN KEY (authorID) REFERENCES users( userID ) ON DELETE CASCADE
 )

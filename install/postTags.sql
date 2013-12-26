@@ -1,0 +1,6 @@
+CREATE TABLE postTags (
+	postID INT(12) NOT NULL,
+	tagID INT(12) NOT NULL,
+
+	CONSTRAINT pastTag PRIMARY KEY (postID,tagID)
+);

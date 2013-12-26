@@ -25,7 +25,8 @@
 				'postBody' => $this->postBody,
 				'authorID' => $this->authorID,
 				'postCreateTime' => $this->postCreateTime,
-				'active' => $this->active );
+				'active' => $this->active 
+				);
 
 			//Insert post to database
 			$this->db->insert('posts',$postDataArray);
@@ -36,8 +37,8 @@
 
 		}//end editPost function
 
-		function deletePost(){
-
+		function deletePost($postID){
+			$this->db->delete('posts',array('postID' => $postID));
 		}//end deletePost function
 
 		function showPosts(){

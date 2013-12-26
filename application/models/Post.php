@@ -33,7 +33,31 @@
 
 		}//end addPost function
 
-		function editPost(){
+		function editPost($postID,$postTitle,$postHead,$postBody,$authorID,$postCreateTime,$postModifyTime,$active){
+
+			// post info
+			$this->postID = $postID;
+			$this->postTitle = $postTitle;
+			$this->postHead = $postHead;
+			$this->postBody = $postBody;
+			$this->authorID = $authorID;
+			$this->postCreateTime = $postCreateTime;
+			$this->postModifyTime = $postModifyTime;
+			$this->active = $active;
+
+			//array of post info
+			$postDataArray =  array(
+				'postTitle' => $this->postTitle,
+				'postHead' => $this->postHead,
+				'postBody' => $this->postBody,
+				'authorID' => $this->authorID,
+				'postCreateTime' => $this->postCreateTime,
+				'postModifyTime' => $this->postModifyTime,
+				'active' => $this->active 
+				);
+
+			//update post info
+			$this->db->update('posts',$postDataArray)->where('postID' => $this->postID);
 
 		}//end editPost function
 

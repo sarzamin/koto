@@ -3,8 +3,8 @@ CREATE TABLE posts (
 	postTitle VARCHAR(250),
 	postHead TEXT NOT NULL,
 	postBody TEXT,
-	postAuthorID INT(12) NOT NULL,
+	authorID INT(12) NOT NULL,
 	postCreateTime TIMESTAMP NOT NULL,
-	postModifyTime TIMESTAMP NOT NULL,
+	postModifyTime TIMESTAMP,
 	active BOOLEAN
 );

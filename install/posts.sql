@@ -1,10 +1,10 @@
-CREATE TABLE posts (
-	postID INT(15) NOT NULL AUTOـINCREMENT PRIMARY KEY,
-	postTitle VARCHAR(250),
-	postHead TEXT NOT NULL,
-	postBody TEXT,
-	authorID INT(12) NOT NULL,
-	postCreateTime TIMESTAMP NOT NULL,
-	postModifyTime TIMESTAMP,
-	active BOOLEAN
-);
+CREATE TABLE posts(
+postID BIGINT( 15 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+postTitle VARCHAR( 250 ) ,
+postHead TEXT NOT NULL ,
+postBody TEXT,
+authorID INT( 12 ) REFERENCES users( userID ) ON DELETE CASCADE ,
+postCreateTime TIMESTAMP NOT NULL ,
+postModifyTime TIMESTAMP,
+active TINYINT(1)
+)

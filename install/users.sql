@@ -9,5 +9,5 @@ CREATE TABLE users (
 	location VARCHAR(250),
 	about TEXT,
 	usertype VARCHAR(25) NOT NULL,
-	active BOOLEAN NOT NULL
+	active TITYINT(1) NOT NULL
 );

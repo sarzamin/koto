@@ -57,7 +57,7 @@
 				);
 
 			//update post info
-			$this->db->update('posts',$postDataArray)->where('postID' => $this->postID);
+			$this->db->update('posts',$postDataArray,array('postID' => $this->postID));
 
 		}//end editPost function
 

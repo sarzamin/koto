@@ -4,14 +4,14 @@
 	*/
 	class Post extends CI_Model {
 
-		var $postID;
-		var $postTitle;
-		var $postHead;
-		var $postBody;
-		var $authorID;
-		var $postCreateTime;
-		var $postModifyTime;
-		var $active;
+		protected $postID;
+		protected $postTitle;
+		protected $postHead;
+		protected $postBody;
+		protected $authorID;
+		protected $postCreateTime;
+		protected $postModifyTime;
+		protected $active;
 
 		function __construct(){
 			parent::__construct();
@@ -27,21 +27,6 @@
 			$this->postCreateTime = $postCreateTime;
 			$this->active = $active;
 
-			//array of post info
-			/*
-			$postDataArray =  array(
-				'postTitle' => $this->postTitle,
-				'postHead' => $this->postHead,
-				'postBody' => $this->postBody,
-				'authorID' => $this->authorID,
-				'postCreateTime' => $this->postCreateTime,
-				'active' => $this->active 
-				);
-			
-
-			//Insert post to database with array
-			$this->db->insert('posts',$postDataArray);
-			*/
 
 			//Insert post to database with object
 			$this->db->insert('posts',$this);
@@ -60,22 +45,6 @@
 			$this->postModifyTime = $postModifyTime;
 			$this->active = $active;
 
-			/*
-			//array of post info
-			$postDataArray =  array(
-				'postTitle' => $this->postTitle,
-				'postHead' => $this->postHead,
-				'postBody' => $this->postBody,
-				'authorID' => $this->authorID,
-				'postCreateTime' => $this->postCreateTime,
-				'postModifyTime' => $this->postModifyTime,
-				'active' => $this->active 
-				);
-
-			//update post info with array
-			$this->db->update('posts',$postDataArray,array('postID' => $this->postID));
-			*/
-
 
 			//update post info with object
 			$this->db->update('posts',$this,array('postID' => $this->postID));
@@ -87,7 +56,7 @@
 			$this->db->delete('posts',array('postID' => $postID));
 		}//end deletePost function
 
-		function showPosts(){
+		function showPosts($numberOfPosts,$start){
 
 		}//end showPosts function
 

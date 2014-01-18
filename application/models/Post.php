@@ -57,7 +57,8 @@
 		}//end deletePost function
 
 		function showPosts($numberOfPosts,$start){
-
+            $result = $this->db->get_where('posts', array('postID>=' => $start), $numberOfPosts);
+            return $result;
 		}//end showPosts function
 
 	}//end class

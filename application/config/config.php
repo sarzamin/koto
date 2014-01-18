@@ -1,7 +1,14 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 
-
+functions __autoload($classname){
+	if(strpos($classname,"CI_")!== 0){
+		$file = $APPPATH . 'libraries/' . $classname . '.php';
+		if (file_exists($file)&&is_file($file)){
+			include_once($file);
+		}
+	}
+}
 
 /*
 |--------------------------------------------------------------------------

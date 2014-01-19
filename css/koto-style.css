@@ -1,0 +1,108 @@
+html {
+	text-align: right;
+}
+#koto-header {
+	width: 96%;
+	border: #222222;
+	border:groove;
+	top: 0px;
+	margin: 2%;
+	padding-right: 1%;
+	padding-left: 1%;
+	background: #F7E1B5;
+}
+#koto-body {
+	width: 96%;
+	margin: 2%;
+}
+#koto-left-content {
+	width: 80%;
+	padding: 1%;
+	float: left;
+}
+#koto-left-pane {
+	width: 25%;
+	float: left;
+	padding: 1%;
+}
+#koto-center-pane {
+	width: 75%;
+	float: left;
+	margin-bottom: 2cm;
+}
+#koto-right-pane {
+	width: 20%;
+	float: right;
+	padding: 1%;
+}
+/* BLOG */
+.koto-blog {
+	border: #222222;
+	border-bottom: outset;
+	margin-top: 1%;
+}
+.koto-blog-title {
+	width: 98%;
+	margin: 1%;
+	border-bottom: inset;
+}
+.koto-blog-content {
+	width: 98%;
+	margin: 1%;
+}
+
+/*FOOTER*/
+#koto-footer {
+	width: 96%;
+	border: #222222;
+	border:groove;
+	position: fixed;
+	bottom: 0px;
+	margin-bottom: 0px;
+	margin-left: 2%;
+	margin-right: 2%;
+	background: #F7E1B5;
+}
+#koto-left-footer {
+	float: left;
+	width: 80%;
+}
+#koto-footer-left {
+	float: left;
+	width: 25%;
+	padding-left: 1%;
+	padding-right: 1%;
+	text-align: center;
+}
+#koto-footer-center {
+	float: right;
+	width: 75%;
+	padding-left: 1%;
+	padding-right: 1%;
+	text-align: center;
+}
+#koto-right-footer {
+	float: right;
+	width: 20%;
+
+}
+/*LOGIN*/
+.koto-login{
+	
+}
+.koto-login input[type=text]{
+	width: 35%;
+	text-align: center;
+}
+.koto-login input[type=password]{
+	width: 35%;
+	text-align: center;
+}
+/*SEARCH*/
+.koto-search-pane{
+	
+}
+.koto-search-pane input[type=text]{
+	width: 60%;
+	text-align: center;
+}

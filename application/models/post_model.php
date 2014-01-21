@@ -2,7 +2,7 @@
 
 	/*
 	*/
-	class Post_model extends MY_Model {
+	class post_model extends MY_Model {
 
 		protected $postID;
 		protected $postTitle;
@@ -37,13 +37,13 @@
 
 			// post infomation array
 			$postData = array(
-				'postTitle' => $postTitle;
-				'postHead' => $postHead;
-				'postBody' => $postBody;
-				'authorID' => $authorID;
-				'postCreateTime' => $postCreateTime;
-				'postModifyTime' => $postModifyTime;
-				'active' => $active;)
+				'postTitle' => $postTitle,
+				'postHead' => $postHead,
+				'postBody' => $postBody,
+				'authorID' => $authorID,
+				'postCreateTime' => $postCreateTime,
+				'postModifyTime' => $postModifyTime,
+				'active' => $active);
 
 			//update post info with object
 			return $this->update($postID,$postData);
@@ -54,7 +54,7 @@
 		}//end deletePost function
 
 		function showPosts($numberOfPosts,$start){
-            $result = $this->db->get($_table)->where('postID<=' = $start)->limit($numberOfPosts);
+            $result = $this->db->get($_table)->where('id<=' = $start)->limit($numberOfPosts);
             return $result;
 		}//end showPosts function
 

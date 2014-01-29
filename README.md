@@ -1,4 +1,4 @@
 koto
 ====
 
-A simple tools to share ideas.
+A simple tool to share ideas.

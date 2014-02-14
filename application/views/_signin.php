@@ -84,8 +84,14 @@ label {
 		<div id="contact-area">
 			
 			<?php
+				if($error==1){
+					echo "your username/password did not match!<br>";
+				}
+			?>
+			
+			<?php
 			$this->load->helper('form');
-			echo form_open('user/loginuser');
+			echo form_open('users/login');
 			?>
 				<label for="Name">username:</label>
 				<input type="text" name="username" id="Name" required/><br>

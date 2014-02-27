@@ -4,7 +4,7 @@
 	 */
 	class post_model extends CI_Model {
 
-		$tablename = '';
+		private $tablename = '';
 		
 		function __construct() {
 			parent::__construct();

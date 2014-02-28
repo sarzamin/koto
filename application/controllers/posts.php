@@ -7,5 +7,13 @@ class Posts extends CI_Controller {
         $data['posts'] = $this->Post->showPosts($numberOfPosts,$startID); 
 
     }//end of index function
+
+
+    function tagParser($content){
+    	$tags = array();
+    	
+
+    	return tags[];
+    }
     
 }//end of Posts controller

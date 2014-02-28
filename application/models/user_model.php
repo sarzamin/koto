@@ -24,8 +24,10 @@
 		}
 
 		function editInfo($userID,$newdata){
-			$where = array('id' => $userID );
 
+			
+
+			$where = array('id' => $userID );
 			$this->db->where($where);
 			$this->db->update('users', $newdata); 
 		}

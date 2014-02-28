@@ -8,4 +8,4 @@ postCreateTime TIMESTAMP NOT NULL ,
 postModifyTime TIMESTAMP,
 active TINYINT(1),
 FOREIGN KEY (authorID) REFERENCES users( id ) ON DELETE CASCADE
-)
+);

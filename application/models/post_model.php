@@ -10,9 +10,15 @@
 			parent::__construct();
 		}
 		
-		function add($data)
+		function add($data,$tags)
 		{
 			$this->db->insert('posts',$data);
+			$postID = $this->db->insert_id();
+
+
+			foreach ($tag as $tags) {
+				$this->db->insert('postTags',array('id' => $postID,'tag'=>$tag ));
+			}
 		}
 		
 		function remove($postID)

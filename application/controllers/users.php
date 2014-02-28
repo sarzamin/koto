@@ -26,7 +26,7 @@ class Users extends CI_Controller {
 				$userdata = array(
 					'username' => $username,
 					'password' => sha1($password),
-					'email' = > $email,
+					'email' => $email,
 					'signupDate' = > $signupDate,
 					'usertype' = > $usertype
 			 	);

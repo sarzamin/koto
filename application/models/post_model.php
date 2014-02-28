@@ -27,6 +27,9 @@
 				
 			$this->db->where($where);
 			$this->db->delete('posts'); 
+
+			$this->db->where($where);
+			$this->db->delete('postTags');
 		}
 
 		function update($postID,$newdata){

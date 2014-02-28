@@ -11,9 +11,9 @@ class Posts extends CI_Controller {
 
     function tagParser($content){
     	$tags = array();
-    	
 
-    	return tags[];
+
+    	return $tags;
     }
     
 }//end of Posts controller

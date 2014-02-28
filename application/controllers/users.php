@@ -27,8 +27,8 @@ class Users extends CI_Controller {
 					'username' => $username,
 					'password' => sha1($password),
 					'email' => $email,
-					'signupDate' = > $signupDate,
-					'usertype' = > $usertype
+					'signupDate' => $signupDate,
+					'usertype' => $usertype
 			 	);
 
 			 	$user = $this->user_model->register($userdata);

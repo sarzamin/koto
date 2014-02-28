@@ -2,7 +2,7 @@ CREATE TABLE postTags (
 	postID BIGINT(15) NOT NULL ,
 	tagName VARCHAR(50) NOT NULL,
 
-	CONSTRAINT postTag PRIMARY KEY (postID,tagID),
+	CONSTRAINT postTag PRIMARY KEY (postID,tagName),
 	FOREIGN KEY (postID) REFERENCES posts(id) ON DELETE CASCADE
 
 );

@@ -33,6 +33,9 @@
 		}
 
 		function update($postID,$newdata){
+			$this->db->where($where);
+			$this->db->delete('postTags');
+			
 			$where = array('id' => $postID );
 
 			$this->db->where($where);

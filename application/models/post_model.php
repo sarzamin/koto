@@ -27,6 +27,8 @@
 				
 			$this->db->where($where);
 			$this->db->delete('posts'); 
+            
+            $where = array('postID' => $postID);
 
 			$this->db->where($where);
 			$this->db->delete('postTags');

@@ -34,14 +34,17 @@
 			$this->db->delete('postTags');
 		}
 
-		function update($postID,$newdata){
+		function update($postID,$newdata,$newtags){
 			$this->db->where($where);
 			$this->db->delete('postTags');
 			
 			$where = array('id' => $postID );
-
 			$this->db->where($where);
 			$this->db->update('posts', $newdata); 
+			
+			foreach ($tag as $newtags) {
+				$this->db->insert('postTags',array('id' => $postID,'tag'=>$tag ));
+			}
 		}
 	}
 	

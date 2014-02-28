@@ -9,7 +9,7 @@ class Posts extends CI_Controller {
     }//end of index function
 
 
-    function tagParser($content){
+    function findTags($content){
     	$tags = array();
 
 

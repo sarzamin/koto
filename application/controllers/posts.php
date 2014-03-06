@@ -10,8 +10,15 @@ class Posts extends CI_Controller {
 
 
     function findTags($content){
-    	$tags = array();
 
+        preg_match_all('/\S*\*(?:\[[^\]]+\]|\S+)/', $content,$rawTags);
+
+        $tags = array();
+        foreach ($rawTags as $rawTag) {
+            foreach ($rawTag as $tag) {
+                array_push($tags, trim(str_replace('*', ' ', $tag)));
+            }
+        }
 
     	return $tags;
     }

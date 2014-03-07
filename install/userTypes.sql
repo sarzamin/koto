@@ -1,0 +1,6 @@
+CREATE TABLE usersTypes(
+    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    type VARCHAR(50) NOT NULL,
+    parent INTEGER NOT NULL
+    
+    );
